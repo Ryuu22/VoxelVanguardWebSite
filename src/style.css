@@ -24,6 +24,9 @@ body {
   margin-bottom: 20px;
 }
 
-.coming-soon {
-  font-size: 1.5em;
+.steam-widget {
+  min-width: 350px;
+  width: 646px;
+  max-width: 646px;
+  min-height: 190px;
 }
