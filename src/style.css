@@ -1,32 +1,238 @@
-body {
+/* Reset default styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  /* Colors */
+  --primary-color: #333;
+  --secondary-color: #ddd;
+  --tertiary-color: #6ec24b;
+  --quaternary-color: #383838;
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--secondary-color);
   background-image: url('background_image.png');
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+  
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.title {
-  width: 50%;
-  height: auto;
-  margin-bottom: 20px;
+input {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+input[type="text"] {
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+
+button {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button.disabled {
+  background-color: #ccc;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0 0;
+}
+
+a {
+  color: var(--tertiary-color);
+}
+
+a:visited {
+  color: var(--tertiary-color);
+}
+
+nav {
+  padding: 10px 0px;
+  background-color: #333;
+  min-height: fit-content;
+  height: 100%;
+  transition: top 0.3s; 
+}
+
+nav a {
+  color: #fff!important;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+}
+
+nav a:hover {
+  color: #ddd;
+  transition: 0.4s;
+}
+
+.header-image {
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .steam-widget {
+  margin-top: 100px;
+  margin-bottom: 100px;
   min-width: 350px;
-  width: 646px;
-  max-width: 646px;
+  width: 100%;
   min-height: 190px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.video-gallery {
+  display: table-column;
+  gap: 20px;
+}
+
+#about {
+  background-color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#newsletter {
+  background-color: #333;
+  text-align: center;
+  padding: 40px 0;
+}
+
+#newsletter > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.screenshot img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.screenshot img:hover {
+  cursor: pointer;
+}
+
+#screenshot-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+}
+
+#screenshot-container img {
+  max-width: 80%;
+  object-fit: contain;
+  
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-top: 30px;
+}
+.video {
+  border: 1px solid #ddd;
+  max-width: 720px;
+  min-height: 340px;
+  width: 90%;
+}
+
+.strokeme {
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #383838;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Animations */
+
+@keyframes bobIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
