@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voxel Vanguard</title>
-  <link rel="icon" href="src/CubeTileIcon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voxel Vanguard</title>
+    <link rel="icon" href="src/CubeTileIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Link preview image metadata -->
+    
+    <script src="metadata.js"></script>
 </head>
 <body>
+    <header>
+      <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#newsletter">News</a>
+      </nav>
+    </header>
 
-<div class="container">
-  <img class="title" src="src/game_title.png" alt="Voxel Vanguard" srcset="">
-  <div class="steam-widget-container">
-    <iframe class="steam-widget" src="https://store.steampowered.com/widget/2821140/?t=Learn%20more..."  frameborder="0"></iframe>
-  </div>
-</div>
-
+    <main>
+        <section id="home">
+          <div class="container">
+            <img class="header-image" src="src/game_title.png" alt="Voxel Vanguard">
+            <iframe class="steam-widget" src="https://store.steampowered.com/widget/2821140/?t=Add%20Voxel%20Vanguard%20to%20your%20wishlist%20so%20you%20know%20when%20it%20gets%20released." frameborder="0" width="646" height="190"></iframe>
+          </div>
+        </section>
+        <section id="about">
+          <div class="container">
+            <h2>About</h2>
+            <br>
+            <p>Voxel Vanguard is a dynamic strategy game set in a vibrant voxel world where players must strategically expand their territory by placing interconnected towers. </p>
+            <p>Navigate through voxel worlds, strategically deploy towers, and connect them with tethers to fend off threats and conquer new territories.</p>
+            <img style="width: 50%; height: auto;" src="src/build.gif" alt="" srcset="">
+            <br>
+            <br>
+            <h2>Steam Fest Demo</h2>
+            <p>Play the Voxel Vanguard demo during the <b>Steam Next Fest</b> event from June 17 </p>
+            <p>to June 22. <a href="https://store.steampowered.com/app/2821140/Voxel_Vanguard/">Wishlist</a> the game on Steam to be notified when the demo is available.</p>
+          </div>
+        </section>
+        <section id="gallery">
+          <div id="screenshot-container">
+            <img src="" alt="">
+          </div>
+          <div class="container">
+            <h2 class="strokeme">Gallery</h2>
+            <div class="gallery">
+              <div class="screenshot">
+                  <img src="src/Screenshot_1.png" alt="Screenshot 1">
+              </div>
+              <div class="screenshot">
+                  <img src="src/Screenshot_2.png" alt="Screenshot 2">
+              </div>
+              <div class="screenshot">
+                  <img src="src/Screenshot_3.png" alt="Screenshot 3">
+              </div>
+              <div class="screenshot">
+                  <img src="src/Screenshot_4.png" alt="Screenshot 4">
+              </div>
+              <div class="screenshot">
+                  <img src="src/Screenshot_5.png" alt="Screenshot 5">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="newsletter">
+          <div class="container">
+            <h2>Join the Vanguard</h2>
+            <p>Subscribe to our newsletter to stay up to date with the latest news and updates.</p>
+            <svg class="icon" id="mail-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path id="email-icon-path" fill="#FFFFFF"  d="M18 8L10 13L2 8V6L10 11L18 6M18 4H2C.9 4 0 4.9 0 6V18C0 19.1 .9 20 2 20H18C19.1 20 20 19.1 20 18V6C20 4.9 19.1 4 18 4M24 7H22V13H24V7M24 15H22V17H24V15Z" /></svg>
+            <form method="post" action="https://systeme.io/embedded/14828078/subscription"> <input id="email-input" placeholder="youremail@mail.com" type=text name=email />
+              <div class="f-row">
+                <br>
+                <button disabled type="submit" id="submit-button" class="btn disabled">Subscribe</button>
+              </div>
+              </form>
+          </div>
+        </section>
+        <section id="devlog">
+          <div class="container">
+            <h2 class="strokeme">Devlog</h2>
+            <div class="video-container">
+              <iframe width="560" height="315"  class="video" src="https://www.youtube.com/embed/vAZy23gDUGQ?si=jW_3t0DtvyC_I3HV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="legal">&copy; 2024 Voxel Vanguard. All rights reserved.</p>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>
