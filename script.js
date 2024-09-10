@@ -57,7 +57,7 @@ function showScreenshot(index) {
 
   for (let i = 0; i < screenshots.length; i++) {
     if (i === index) {
-      screenshotContainer.appendChild(createImageElement(`src/Screenshot_${i + 1}.png`));
+      screenshotContainer.appendChild(createImageElement(`images/Screenshot_${i + 1}.png`));
     }
   }
 }
